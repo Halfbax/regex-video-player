@@ -1,0 +1,47 @@
+﻿<Window x:Class="NarutoViewer.AnimeSelectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NarutoViewer"
+        mc:Ignorable="d"
+        Title="AnimeSelectionWindow" Height="500" Width="900" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style x:Key="MouseHoverStyle" TargetType="Image">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Opacity" Value="0.25"></Setter>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="1"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="0" Name="naruto" Click="animeSelection_Click">
+            <Viewbox>
+                <Image Source="{StaticResource naruto-classic}" Style="{StaticResource MouseHoverStyle}"/>
+            </Viewbox>            
+        </Button>
+
+        <Button  Grid.Column="1" Name="shippuuden" Click="animeSelection_Click">
+            <Viewbox>
+                <Image Source="{StaticResource naruto-shippuden}" Style="{StaticResource MouseHoverStyle}"/>
+            </Viewbox>
+        </Button>
+
+        <Button Grid.Column="2" Name="boruto" Click="animeSelection_Click">
+            <Viewbox>
+                <Image Source="{StaticResource boruto}" Style="{StaticResource MouseHoverStyle}"/>
+            </Viewbox>
+        </Button>
+    </Grid>
+</Window>

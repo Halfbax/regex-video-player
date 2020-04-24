@@ -1,0 +1,13 @@
+﻿<Application x:Class="NarutoViewer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NarutoViewer"
+             StartupUri="AnimeSelectionWIndow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <BitmapImage x:Key="naruto-shippuden" UriSource="Assets\shippuden.png"/>
+            <BitmapImage x:Key="naruto-classic" UriSource="Assets\classic.png"/>
+            <BitmapImage x:Key="boruto" UriSource="Assets\boruto.png"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
