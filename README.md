@@ -9,6 +9,7 @@ This tool extracts video files from html and streams it.
  ## TODO
 - [ ] Code capsulating
 - [ ] Code cleanup
+- [ ] Seperate bsl and ui  
 - [ ] Remove parsing html from static website 
   
 ## Known issues
