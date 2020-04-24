@@ -1,4 +1,4 @@
-﻿namespace NarutoViewer.Models
+﻿namespace RegexVideoPlayer.Models
 {
     using System;
     using System.Collections.Generic;
@@ -36,12 +36,12 @@
 
     public partial class Naruto
     {
-        public static Naruto FromJson(string json) => JsonConvert.DeserializeObject<Naruto>(json, NarutoViewer.Models.Converter.Settings);
+        public static Naruto FromJson(string json) => JsonConvert.DeserializeObject<Naruto>(json, RegexVideoPlayer.Models.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Naruto self) => JsonConvert.SerializeObject(self, NarutoViewer.Models.Converter.Settings);
+        public static string ToJson(this Naruto self) => JsonConvert.SerializeObject(self, RegexVideoPlayer.Models.Converter.Settings);
     }
 
     internal static class Converter

@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 
 
-namespace NarutoViewer
+namespace RegexVideoPlayer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

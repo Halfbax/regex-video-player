@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace NarutoViewer.Core
+namespace RegexVideoPlayer.Core
 {
     class Config
     {
