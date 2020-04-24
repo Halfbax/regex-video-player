@@ -10,6 +10,7 @@ This tool extracts video files from html and streams it.
 - [ ] Code capsulating
 - [ ] Code cleanup
 - [ ] Seperate bsl and ui  
+- [ ] Embed wmp
 - [ ] Remove parsing html from static website 
   
 ## Known issues
