@@ -2,7 +2,7 @@
 using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows;
-
+using System.Windows.Controls;
 
 namespace RegexVideoPlayer
 {
@@ -42,6 +42,9 @@ namespace RegexVideoPlayer
             }
 
             listViewEpisodes.ScrollIntoView(listViewEpisodes.SelectedItem);
+
+            mediaElementPlayer.LoadedBehavior = MediaState.Play;
+            mediaElementPlayer.MediaFailed += mediaElementPlayer_MediaFailed;
         }
 
         private string getVideoUrlById(int id)
@@ -61,6 +64,9 @@ namespace RegexVideoPlayer
         {
             string episode = getVideoUrlById(listViewEpisodes.SelectedIndex + 1);
             webBrowser.Navigate(episode);
+            Console.WriteLine(episode);
+
+            //mediaElementPlayer.Source = new Uri(episode, UriKind.Absolute);
 
             switch (Anime)
             {
@@ -76,5 +82,15 @@ namespace RegexVideoPlayer
             }
             Core.Config.Save(this.config);
         }
-    }
+
+        private void mediaElementPlayer_MediaFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+            MessageBox.Show(e.ErrorException.Message);
+        }
+
+        //private void mediaElementPlayer_MediaOpened(object sender, RoutedEventArgs e)
+        //{
+        //    mediaElementPlayer.Play();
+        //}
+    }   
 }

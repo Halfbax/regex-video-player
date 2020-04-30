@@ -9,14 +9,16 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ListView Name="listViewEpisodes" Grid.Row="0"/>        
+        <ListView Name="listViewEpisodes" Grid.Row="0"/>
         <Button Name="buttonPlay" Content="Start" Grid.Row="1" Click="buttonPlay_Click"/>
         <WebBrowser Name="webBrowser" Visibility="Collapsed"/>
+        <MediaElement x:Name="mediaElementPlayer" Grid.RowSpan="2" Grid.Column="2"/>
     </Grid>
 </Window>
