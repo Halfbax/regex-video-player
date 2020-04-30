@@ -49,7 +49,11 @@ namespace RegexVideoPlayer
 
         private string getVideoUrlById(int id)
         {
-            return extractData(extractData(String.Format("https://naruto-tube.org/{0}-sub-{1:D3}", Anime, id), @"<iframe\s+(?:[^>]*?\s+)?src=([""'])(.*?)\1", 2), @"https?.*?\.mp4");
+            return Core.Parser.ExtractData(
+                Core.Parser.ExtractData(
+                    String.Format("https://naruto-tube.org/{0}-sub-{1:D3}", Anime, id), 
+                    @"<iframe\s+(?:[^>]*?\s+)?src=([""'])(.*?)\1", 2), 
+                @"https?.*?\.mp4");
         }
 
         private string extractData(string url, string pattern, int grpId = 0)
