@@ -7,8 +7,8 @@ This tool extracts video files from html and streams it.
 
 
  ## Work in progress
-- [ ] BSL
-- [ ] Clean up
+- [X] BSL
+- [X] Clean up
 - [ ] Core/Config.cs rework
 - [ ] Implementing media element https fix
   
