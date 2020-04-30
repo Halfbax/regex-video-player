@@ -6,12 +6,11 @@ This tool extracts video files from html and streams it.
 **HINT**: Current build is just for regex testing pupose
 
 
- ## TODO
-- [ ] Code capsulating
-- [ ] Code cleanup
-- [ ] Seperate bsl and ui  
-- [ ] Embed wmp
-- [ ] Remove parsing html from static website 
+ ## Work in progress
+- [ ] BSL
+- [ ] Clean up
+- [ ] Core/Config.cs rework
+- [ ] Implementing media element https fix
   
 ## Known issues
 Latest build: None
