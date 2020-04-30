@@ -129,6 +129,34 @@
     </shell:WindowChrome.WindowChrome>
 
     <Grid Background="{StaticResource ForegroundLightBrush}">
-        <!--<Button Content="Test"/>-->
+        <Grid.RowDefinitions>
+            <!-- Navigation bar -->
+            <RowDefinition Height="{Binding NavigationBarHeight, FallbackValue=80}"/>
+
+            <!-- Media content -->
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Margin="0 30 0 0">
+            <Grid.ColumnDefinitions>
+                <!-- Navigation left button -->
+                <ColumnDefinition Width="{Binding NavigationButtonWidth, FallbackValue=100}"/>
+
+                <!-- Navigation info -->
+                <ColumnDefinition Width="*"/>
+
+                <!-- Navigation left button -->
+                <ColumnDefinition Width="{Binding NavigationButtonWidth, FallbackValue=100}"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Style="{StaticResource NavigationLeftButton}" Content="{Binding PrevButtonBinding, FallbackValue=Prev}"/>
+            <Button Grid.Column="2" Style="{StaticResource NavigationRightButton}" Content="{Binding NextButtonBinding, FallbackValue=Next}"/>
+            
+            <Viewbox Grid.Column="1" Margin="10" Stretch="Uniform">
+                <TextBox Style ="{StaticResource BaseStyle}" Text="{Binding CurrentEpisode, FallbackValue=0}"/>
+            </Viewbox>
+        </Grid>
+
+        <MediaElement Margin="10 20 10 10" Grid.Row="1"/>
     </Grid>
 </Window>

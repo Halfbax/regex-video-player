@@ -69,4 +69,52 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+
+    <!-- Navigation button -->
+    <Style TargetType="{x:Type Button}" x:Key="NavigationBaseButton" BasedOn="{StaticResource NavigationButtonTextStyle}">
+        <Setter Property="Background" Value="{StaticResource BackgroundLightBrush}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="{StaticResource ForegroundMainBrush}"/>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="Width" From="20" To="80"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.1" Storyboard.TargetProperty="Width" From="80" To="20"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Left navigation button -->
+    <Style TargetType="{x:Type Button}" x:Key="NavigationLeftButton" BasedOn="{StaticResource NavigationBaseButton}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Content" Value="|"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!-- Right navigation button -->
+    <Style TargetType="{x:Type Button}" x:Key="NavigationRightButton" BasedOn="{StaticResource NavigationBaseButton}">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="Content" Value="|"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>
