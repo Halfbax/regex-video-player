@@ -70,8 +70,6 @@ namespace RegexVideoPlayer
             webBrowser.Navigate(episode);
             Console.WriteLine(episode);
 
-            //mediaElementPlayer.Source = new Uri(episode, UriKind.Absolute);
-
             switch (Anime)
             {
                 case "shippuuden":
@@ -91,10 +89,5 @@ namespace RegexVideoPlayer
         {
             MessageBox.Show(e.ErrorException.Message);
         }
-
-        //private void mediaElementPlayer_MediaOpened(object sender, RoutedEventArgs e)
-        //{
-        //    mediaElementPlayer.Play();
-        //}
     }   
 }
